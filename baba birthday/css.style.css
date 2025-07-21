@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Papyrus', fantasy;
+  background-color: #ffe4b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #8b0000;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dad-photo {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
