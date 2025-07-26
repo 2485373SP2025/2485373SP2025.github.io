@@ -26,7 +26,7 @@ function fetchGradeData() {
     xhr.onreadystatechange = function(){
         let results;
         // Check if we're done
-        if(xhr.readyState === xhr.done){
+        if(xhr.readyState === XMLHttpRequest.DONE){
             // Check if we're successful
             if(xhr.status !== 200)
                 {
@@ -37,7 +37,7 @@ function fetchGradeData() {
             populateGradebook(JSON.parse(NavigationHistoryEntry.responseText));
             }
     }.bind(this);
-    xhr.open("get", apiRoute, ture);
+    xhr.open("get", apiRoute, true);
     xhr.send();
 }
 
@@ -45,7 +45,7 @@ function populateGradebook(data) {
     // This function will take the fetched grade data and populate the table
     console.log("Populating gradebook with data:", data);
     let tableElm = document.getElementById("gradebook"); // Get the gradebook table element
-        data.forEachfunction(assignment);
+        data.forEach(function(assignment) {
             // For each row of data we're passed in
             let row = document.createElement("tr"); // create a table row element
             let columns = []; // Handy place to stick the columns of information
@@ -65,4 +65,5 @@ function populateGradebook(data) {
             row.appendChild(columns.grade);
             // Add the row to the table itself to make the data visible
             tableElm.appendChild(row);
-        }
+        });
+}
