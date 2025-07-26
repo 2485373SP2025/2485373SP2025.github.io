@@ -13,7 +13,7 @@ function populationGradebook(data) {
 //TODO REMOVE THIS
 //Call the stubs to demonstrate the workflow 
 const gradeData = fetchGradeData ();
-populateGradebook(gradedata);
+populateGradebook(gradeData);
 //END REMOVE
 function fetchGradeData() {
     // This function will query the PostgreSQL database and return grade data
